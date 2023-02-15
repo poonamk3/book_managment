@@ -8,11 +8,11 @@ name: "Ruby on Rails CI"
 on:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
+  # pull_request:
+  #   branches: [ "master" ]
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     services:
       postgres:
         image: postgres:11-alpine
